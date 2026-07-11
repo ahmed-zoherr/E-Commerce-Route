@@ -62,31 +62,41 @@ export default function HomeDelas() {
 
   return (
     <>
-      <section id="HomeDeals" className="p-20">
+      <section id="HomeDeals" className="p-4 sm:p-10 md:p-20">
         <div className="container">
-          <div className="view-deals-div flex justify-between items-center">
+          <div className="view-deals-div flex flex-wrap justify-between items-center gap-3 mb-4">
             <div className="right-side space-y-2">
-              <h2 className="capitalize font-bold text-2xl">deals of today</h2>
-              <div className="flex gap-2 items-center">
-                <p className="text-xl"> end of .....</p>
+              <h2 className="capitalize font-bold text-lg sm:text-xl md:text-2xl">
+                deals of today
+              </h2>
+              <div className="flex flex-wrap gap-2 items-center">
+                <p className="text-sm sm:text-base md:text-xl whitespace-nowrap">
+                  end of .....
+                </p>
                 <div className="counters flex gap-1 items-center">
-                  <div className="counter1 rounded-md text-sm  size-7 flex items-center justify-center bg-gray-900/50">
+                  <div className="counter1 rounded-md text-xs sm:text-sm size-6 sm:size-7 flex items-center justify-center bg-gray-900/50">
                     {timeLeft.hours}
                   </div>
-                  <span className="">:</span>
-                  <div className="counter2 size-7 rounded-md text-sm flex items-center justify-center bg-gray-900/50">
+                  <span>:</span>
+                  <div className="counter2 size-6 sm:size-7 rounded-md text-xs sm:text-sm flex items-center justify-center bg-gray-900/50">
                     {timeLeft.minutes}
                   </div>
                   <span>:</span>
-                  <div className="counter3 size-7 rounded-md text-sm flex items-center justify-center bg-gray-900/50">
+                  <div className="counter3 size-6 sm:size-7 rounded-md text-xs sm:text-sm flex items-center justify-center bg-gray-900/50">
                     {timeLeft.seconds}
                   </div>
                 </div>
               </div>
             </div>
-            <Link to={`/deals`}>all deals</Link>
+            <Link
+              to={`/deals`}
+              className="text-sm sm:text-base whitespace-nowrap"
+            >
+              all deals
+            </Link>
           </div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-5 gap-5 py-15">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-5 py-8 sm:py-15">
             {deals?.map((product) => (
               <ProductCard key={product.id} productInfo={product} />
             ))}

@@ -93,9 +93,9 @@ export default function Navbar() {
               </li>
               <li>
                 <select name="" id="">
-                  <option value="sar">sar</option>
-                  <option value="egp">egp</option>
-                  <option value="add">add</option>
+                  <option value="SAR">SAR</option>
+                  <option value="EGP">EGP</option>
+                  <option value="AED">AED</option>
                 </select>
               </li>
               <li>
