@@ -34,10 +34,10 @@ export default function HomeSlider() {
                 </h2>
                 <p> Get 20% Of Your First Product !</p>
                 <div className="buttons flex gap-3">
-                  <button className="btn border-2 border-white bg-white text-primary-600 text-sm sm:text-base">
+                  <button className="btn border-2 border-white bg-white text-primary-600 text-xs sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 whitespace-nowrap">
                     Shop Now
                   </button>
-                  <button className="btn px-6 sm:px-10 border-2 border-white bg-transparent text-white hover:text-primary-600 hover:bg-white text-sm sm:text-base">
+                  <button className="btn px-3 py-1.5 sm:px-10 sm:py-2 border-2 border-white bg-transparent text-white hover:text-primary-600 hover:bg-white text-xs sm:text-base whitespace-nowrap">
                     View Deal
                   </button>
                 </div>
@@ -61,10 +61,10 @@ export default function HomeSlider() {
                 </h2>
                 <p> Get 20% Of Your First Product !</p>
                 <div className="buttons flex gap-3">
-                  <button className="btn border-2 border-white bg-white text-primary-600 text-sm sm:text-base">
+                  <button className="btn border-2 border-white bg-white text-primary-600 text-xs sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 whitespace-nowrap">
                     Shop Now
                   </button>
-                  <button className="btn px-6 sm:px-10 border-2 border-white bg-transparent text-white hover:text-primary-600 hover:bg-white text-sm sm:text-base">
+                  <button className="btn px-3 py-1.5 sm:px-10 sm:py-2 border-2 border-white bg-transparent text-white hover:text-primary-600 hover:bg-white text-xs sm:text-base whitespace-nowrap">
                     View Deal
                   </button>
                 </div>
@@ -88,10 +88,10 @@ export default function HomeSlider() {
                 </h2>
                 <p> Get 20% Of Your First Product !</p>
                 <div className="buttons flex gap-3">
-                  <button className="btn border-2 border-white bg-white text-primary-600 text-sm sm:text-base">
+                  <button className="btn border-2 border-white bg-white text-primary-600 text-xs sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 whitespace-nowrap">
                     Shop Now
                   </button>
-                  <button className="btn px-6 sm:px-10 border-2 border-white bg-transparent text-white hover:text-primary-600 hover:bg-white text-sm sm:text-base">
+                  <button className="btn px-3 py-1.5 sm:px-10 sm:py-2 border-2 border-white bg-transparent text-white hover:text-primary-600 hover:bg-white text-xs sm:text-base whitespace-nowrap">
                     View Deal
                   </button>
                 </div>
