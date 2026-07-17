@@ -40,7 +40,6 @@
   }
 }
 @layer components {
-  /* ? ستايل جاهز للسيرش  */
   .form-control {
     @apply px-3 py-2 rounded-md border focus:outline-none focus:border-primary-500 border-gray-400/50;
   }
@@ -57,7 +56,7 @@
 .swiper-button-next {
   @apply size-12! after:text-lg! text-center!  p-2.5 rounded-full bg-primary-400/50 text-white/90!;
 }
-/* ? هنا انا اشتغلن بالسايز والبادينج العادي والامبورتانت والباقي مشتغلش معايا */
+
 .swiper-pagination-bullet-active {
   @apply w-4! rounded-full! bg-white!;
 }
@@ -66,8 +65,8 @@
 } */
 /* .swiper-button-prev svg,
 .swiper-button-next svg {
-  @apply size-8! flex! items-center! justify-center!; /* غير الرقم ده براحتك (7 يعني 28 بيكسل) */
-*/ .image-gallery-thumbnail.active,
+*/
+.image-gallery-thumbnail.active,
 .image-gallery-thumbnail:focus {
   --ig-primary-color: var(--color-primary-500);
 }
