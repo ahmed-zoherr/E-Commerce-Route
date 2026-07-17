@@ -90,15 +90,6 @@ function App() {
           ),
           children: [
             {
-              path: "orders",
-              element: (
-                <ProtectedRoute skeleton={<OrdersSkelton />}>
-                  <Orders />
-                </ProtectedRoute>
-              ),
-            },
-
-            {
               index: true,
               element: <DashBoard />,
             },

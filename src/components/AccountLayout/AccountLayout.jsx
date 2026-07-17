@@ -1,6 +1,5 @@
 import {
   faUser,
-  faBox,
   faGaugeHigh,
   faLocationDot,
   faRightFromBracket,
@@ -8,6 +7,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink, Outlet } from "react-router";
 import MetaData from "../MetaData/MetaData";
+import { AuthContext } from "../../context/Auth.context";
+import { useContext } from "react";
 
 const navLinkClass = ({ isActive }) =>
   isActive
@@ -15,6 +16,7 @@ const navLinkClass = ({ isActive }) =>
     : "flex items-center gap-3 px-4 py-3 text-gray-500 hover:text-gray-800 hover:bg-gray-50 rounded-xl transition-all duration-200 font-medium text-sm";
 
 export default function AccountLayout() {
+  const { Logout, token } = useContext(AuthContext);
   return (
     <>
       <MetaData
@@ -51,11 +53,6 @@ export default function AccountLayout() {
                   <span>Dashboard</span>
                 </NavLink>
 
-                <NavLink to="orders" className={navLinkClass}>
-                  <FontAwesomeIcon icon={faBox} className="w-5 text-center" />
-                  <span>Orders</span>
-                </NavLink>
-
                 <NavLink to="addrress" className={navLinkClass}>
                   <FontAwesomeIcon
                     icon={faLocationDot}
@@ -69,7 +66,10 @@ export default function AccountLayout() {
                   <span>Account Details</span>
                 </NavLink>
 
-                <div className="flex items-center gap-3 px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all duration-200 cursor-pointer font-medium text-sm mt-1">
+                <div
+                  onClick={Logout}
+                  className="flex items-center gap-3 px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all duration-200 cursor-pointer font-medium text-sm mt-1"
+                >
                   <FontAwesomeIcon
                     icon={faRightFromBracket}
                     className="w-5 text-center"

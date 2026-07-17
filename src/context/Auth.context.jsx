@@ -8,6 +8,7 @@ export default function AuthProvider({ children }) {
   );
   const [isAuthentected, setIsAuthentected] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
   const [userInfo, setUserInfo] = useState(
     JSON.parse(localStorage.getItem("userInfo")),
   );
@@ -47,6 +48,7 @@ export default function AuthProvider({ children }) {
     localStorage.removeItem("token");
     localStorage.removeItem("userInfo");
     sessionStorage.removeItem("token");
+    window.location.href = "/";
   }
   return (
     <AuthContext.Provider
