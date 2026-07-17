@@ -6,7 +6,7 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { useGetWishlist, useRemoveFromWishlist } from "../../Hooks/useWishlist";
-import { useAddToCart } from "../../Hooks/useAddToCart";
+import { useAddToCart } from "../../Hooks/useAddTocart";
 import WishlistSkelton from "../../components/Skelton/WishlistSkelton";
 import MetaData from "../../components/MetaData/MetaData";
 import { Link } from "react-router";
