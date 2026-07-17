@@ -35,6 +35,7 @@ import CartSkelton from "./components/Skelton/CartSkelton";
 import WishlistSkelton from "./components/Skelton/WishlistSkelton";
 import DashboardSkelton from "./components/Skelton/DashboardSkelton";
 import OrdersSkelton from "./components/Skelton/OrdersSkelton";
+import InfoPage from "./components/InfoPage/InfoPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -75,6 +76,10 @@ function App() {
             </ProtectedRoute>
           ),
         },
+        {
+          path: "info/:pageName",
+          element: <InfoPage />,
+        },
 
         {
           path: "account",
@@ -91,10 +96,6 @@ function App() {
                   <Orders />
                 </ProtectedRoute>
               ),
-            },
-            {
-              path: "favourite",
-              element: <Favourites />,
             },
 
             {
@@ -113,10 +114,6 @@ function App() {
         },
 
         {
-          path: "forgetpassword",
-          element: <ForgetPassword />,
-        },
-        {
           path: "cart",
           element: (
             <ProtectedRoute skeleton={<CartSkelton />}>
@@ -128,10 +125,7 @@ function App() {
           path: "signup",
           element: <Signup />,
         },
-        {
-          path: "verify-email",
-          element: <VerifyEmail />,
-        },
+
         {
           //  path:"productsdetails",
           //  ?
@@ -139,18 +133,6 @@ function App() {
           element: <ProductDetails />,
         },
 
-        {
-          path: "search-products",
-          element: <SeacrhProducts />,
-        },
-        {
-          path: "categories",
-          element: <Categories />,
-        },
-        {
-          path: "brands",
-          element: <Brands />,
-        },
         {
           path: "*",
           element: <Notfound />,

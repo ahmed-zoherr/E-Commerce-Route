@@ -27,3 +27,15 @@ export async function getProductToWishlist() {
     throw error;
   }
 }
+export async function removeProductFromWishlist({ productId }) {
+  try {
+    const options = {
+      url: `/wishlist/${productId}`,
+      method: "DELETE",
+    };
+    const response = await apiClient.request(options);
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}

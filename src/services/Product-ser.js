@@ -1,6 +1,7 @@
 import { apiClient } from "./api-client";
 export async function getAllProducts({
   page,
+  limit,
   keyword,
   priceGreaterThan,
   priceLessThan,
@@ -11,12 +12,14 @@ export async function getAllProducts({
   try {
     const options = {
       url: `/products?${page ? `page=${page}` : ""}${
-        keyword ? `&keyword=${keyword}` : ""
-      }${priceGreaterThan ? `&price[gte]=${priceGreaterThan}` : ""}${
-        priceLessThan ? `&price[lte]=${priceLessThan}` : ""
-      }${sortedBy ? `&sort=${sortedBy}` : ""}${
-        category ? `&category[in]=${category}` : ""
-      }${brand ? `&brand=${brand}` : ""}`,
+        limit ? `&limit=${limit}` : ""
+      }${keyword ? `&keyword=${keyword}` : ""}${
+        priceGreaterThan ? `&price[gte]=${priceGreaterThan}` : ""
+      }${priceLessThan ? `&price[lte]=${priceLessThan}` : ""}${
+        sortedBy ? `&sort=${sortedBy}` : ""
+      }${category ? `&category[in]=${category}` : ""}${
+        brand ? `&brand=${brand}` : ""
+      }`,
       method: "GET",
     };
     const response = await apiClient.request(options);

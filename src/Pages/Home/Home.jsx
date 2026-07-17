@@ -12,7 +12,7 @@ export default function Home() {
       <MetaData title="Home Page" />
       <HomeSlider />
       <HomeFeatures />
-      <HomeCategories />
+      {/* <HomeCategories /> */}
       <HomeDeals />
       <FeaturedProducts />
     </>

@@ -13,6 +13,7 @@ import { useParams } from "react-router";
 import Loading from "../../components/Loading/Loading";
 import { getProductById } from "../../services/Product-ser";
 import { useProductDetails } from "../../Hooks/useProductsDetails";
+import MetaData from "../../components/MetaData/MetaData";
 // import Rating from "../components/Rating/Rating";
 
 export default function ProductDetails() {
@@ -26,6 +27,10 @@ export default function ProductDetails() {
   }
   return (
     <>
+      <MetaData
+        title="Product Details - Fresh Cart"
+        description="View detailed information about this product"
+      />
       <ProductInfo productDetails={productDetails} />
       <ProductTabs productDetails={productDetails} />
       <RelatedProducts productDetails={productDetails} />

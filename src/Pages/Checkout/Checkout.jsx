@@ -26,6 +26,7 @@ import { useGetCart } from "../../Hooks/useGetCart";
 import Loading from "../../components/Loading/Loading";
 import { useQueryClient } from "@tanstack/react-query";
 import CheckoutSkelton from "../../components/Skelton/CheckoutSkelton";
+import MetaData from "../../components/MetaData/MetaData";
 
 export default function Checkout() {
   const navigate = useNavigate();
@@ -113,6 +114,10 @@ export default function Checkout() {
   }
   return (
     <>
+      <MetaData
+        title="Checkout - Fresh Cart"
+        description="Complete your purchase securely and review your order details before payment."
+      />
       <section>
         <div className="container max-w-5xl py-6 px-4">
           <h2 className="font-semibold text-2xl mb-6">Check Out</h2>
