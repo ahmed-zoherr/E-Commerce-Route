@@ -116,6 +116,7 @@ export default function Dashboard() {
                   </p>
                   <p className="text-xs text-gray-400">
                     {new Date(order.createdAt).toLocaleDateString()}
+                    {console.log(order.createdAt)}
                   </p>
                 </div>
               </div>

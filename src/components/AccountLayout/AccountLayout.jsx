@@ -16,7 +16,9 @@ const navLinkClass = ({ isActive }) =>
     : "flex items-center gap-3 px-4 py-3 text-gray-500 hover:text-gray-800 hover:bg-gray-50 rounded-xl transition-all duration-200 font-medium text-sm";
 
 export default function AccountLayout() {
-  const { Logout, token } = useContext(AuthContext);
+  const { Logout, token, userInfo } = useContext(AuthContext);
+  console.log(userInfo);
+
   return (
     <>
       <MetaData
@@ -35,10 +37,10 @@ export default function AccountLayout() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-gray-800 truncate">
-                    Usama Ali
+                    {userInfo?.name ?? "—"}
                   </p>
-                  <p className="text-xs text-gray-400 truncate">
-                    user@example.com
+                  <p className="text-xs text-gray-400 truncate text-center ">
+                    user
                   </p>
                 </div>
               </div>

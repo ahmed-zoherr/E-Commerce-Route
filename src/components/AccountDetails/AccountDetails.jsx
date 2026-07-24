@@ -56,7 +56,7 @@ export default function AccountDetails() {
             </button>
           </div>
 
-          <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+          {/* <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-gray-400">
                 <FontAwesomeIcon icon={faEnvelope} className="text-sm" />
@@ -69,7 +69,7 @@ export default function AccountDetails() {
             <button className="w-8 h-8 rounded-xl border border-gray-200 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-200 transition-all">
               <FontAwesomeIcon icon={faPen} className="text-xs" />
             </button>
-          </div>
+          </div> */}
 
           <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
             <div className="flex items-center gap-3">
